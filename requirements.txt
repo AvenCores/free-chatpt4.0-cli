@@ -1,0 +1,7 @@
+websocket-client
+tls-client
+termcolor
+curl_cffi
+requests
+pypasser
+names

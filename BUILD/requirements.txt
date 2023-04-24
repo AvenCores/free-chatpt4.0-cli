@@ -1,0 +1,4 @@
+pyinstaller
+termcolor
+requests
+openai
