@@ -29,9 +29,7 @@ print(colored("Telegram channel: ", "red") + "@hzfnews")
 while True:
     youinput = input(colored("\n👨 You ", "yellow") + colored(">> ", "green"))
     try:
-        response = quora.Completion.create(model  = 'sage',
-            prompt = youinput,
-            token  = 'AuYSfjZVc5eyAzrWjKmjFg%3D%3D')
+        response = quora.Completion.create(model  = 'sage', prompt = youinput, token  = 'AuYSfjZVc5eyAzrWjKmjFg%3D%3D')
         output = response.completion.choices[0].text
         print(colored("\n🤖 CHATGPT V4.0 ", "cyan") + colored(">> ", "green") +  output)
     except Exception as e:
