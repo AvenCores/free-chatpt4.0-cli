@@ -6,7 +6,7 @@ if platform == "win32":
     system("rd /s /q build")
     system("rd /s /q dist")
     system("del /q *.spec")
-    system(f'pyinstaller --noconfirm --onefile --icon "cli.ico" --add-data "../ora;." "../main.py"')
+    system(f'pyinstaller --noconfirm --onefile --icon "cli.ico" --add-data "../quora;." "../main.py"')
     system("del /q *.spec")
     system("rd /s /q build")
     system("rd /s /q %USERPROFILE%\AppData\Local\pyinstaller")

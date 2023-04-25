@@ -1,7 +1,7 @@
 from termcolor import colored
 from sys import platform
 from os import system
-import ora
+import quora
 
 def clear():
 	if platform == "linux" or platform == "linux2" or platform == "unix":
@@ -29,9 +29,9 @@ print(colored("Telegram channel: ", "red") + "@hzfnews")
 while True:
     youinput = input(colored("\n👨 You ", "yellow") + colored(">> ", "green"))
     try:
-        model = ora.CompletionModel.create('gpt-4')
-        prompt = youinput
-        response = ora.Completion.create(model = model, prompt = prompt, includeHistory = True)
+        response = quora.Completion.create(model  = 'sage',
+            prompt = youinput,
+            token  = 'AuYSfjZVc5eyAzrWjKmjFg%3D%3D')
         output = response.completion.choices[0].text
         print(colored("\n🤖 CHATGPT V4.0 ", "cyan") + colored(">> ", "green") +  output)
     except Exception as e:
