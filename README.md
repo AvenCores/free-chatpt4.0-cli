@@ -7,7 +7,7 @@ ___
 * **pip install -r requirements.txt**
 ___
 # 💎 Запуск
-* **python main.py** or **main.exe**
+* **python main.py**
 ___
 # 💰 Поддержать проект:
 
