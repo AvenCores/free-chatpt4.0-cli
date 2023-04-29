@@ -1,7 +1,8 @@
+from gpt4free import Provider
 from termcolor import colored
 from sys import platform
 from os import system
-import quora
+import gpt4free
 
 def clear():
 	if platform == "linux" or platform == "linux2" or platform == "unix":
@@ -29,8 +30,8 @@ print(colored("Telegram channel: ", "red") + "@hzfnews")
 while True:
     youinput = input(colored("\n👨 You ", "yellow") + colored(">> ", "green"))
     try:
-        response = quora.Completion.create(model  = 'sage', prompt = youinput, token  = 'AuYSfjZVc5eyAzrWjKmjFg%3D%3D')
-        output = response.completion.choices[0].text
+        response = gpt4free.Completion.create(Provider.Theb, prompt=youinput)
+        output = response
         print(colored("\n🤖 CHATGPT V4.0 ", "cyan") + colored(">> ", "green") +  output)
     except Exception as e:
 	    print(colored("\n🛑 ERROR ", "light_red") + colored(">> ", "green") + str(e))
